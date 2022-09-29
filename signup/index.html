@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Daftar </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .field {
+                display: block;
+                margin: 12px auto;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 5px solid lightblue; padding: 20px; width: 70%;">
+            <h1 style="text-align: center;">Daftar</h1>
+            <form action="" method="post" padding: 6px 12px>
+                <input type="text" name="name" id="name" placeholder="Nama" class="field">
+                <input type="email" name="email" id="email" placeholder="Email" class="field">
+                <input type="tel" name="phone" id="phone" placeholder="Telepon" class="field">
+                <input type="password" name="password" id="password" placeholder="Password" class="field">
+
+                <select name="jk" id="jk" class="field">
+                  <option value="laki">Laki-laki</option>
+                  <option value="perempuan">Perempuan</option>
+                </select>
+
+                <button class="field" type="submit" style="text-align: center;">Daftar</button>
+                <p class="field">Sudah punya akun? <a href="../login/">Masuk</a></p>
+            </form>
+        </div>
+    </body>
+</html>

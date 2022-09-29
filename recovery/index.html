@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reset kata sandi </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .field {
+                display: block;
+                margin: 12px auto;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 5px solid lightblue; padding: 20px; width: 40%;">
+            <p>Kembali ke halaman <a href="../login/">Login</a></p>
+            <h1 style="text-align: center;">Reset kata sandi</h1>
+            <form style="margin: 0 auto;">
+                <input type="email" name="email" id="email" placeholder="Email" class="field">
+                <button type="button" onclick="resetAccount()" style="margin-bottom: 12px; text-align: center; width: 100%;">Reset</button>
+            </form>
+        </div>
+        
+        <script>
+            function resetAccount() {
+                alert("Silahkan cek email Anda untuk langkah selanjutnya");
+                location.href = "../login";
+            }
+        </script>
+    </body>
+</html>
