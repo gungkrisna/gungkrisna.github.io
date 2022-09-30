@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e43ef1efb4.js" crossorigin="anonymous"></script>
+    <title>Tambah Produk | Dewata Market</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div style="display: flex; align-items: center;">
+            <img class="logo" src="../assets/images/logo.png" alt="logo" href="https://id.pngtree.com/so/pergi-ke-pantai">
+            <h1 style="margin-left: 10px; display: inline-block; font-size: 24px;">Dewata Market</h1>
+        </div>
+        <button type="button" onclick="location.href='../login/'" class="btn-danger">Logout</button>
+    </div>
+        <div style="margin: 20px auto; width: 90%;">
+            <p><a href="../dashboard/">Dashboard</a> / Tambah Produk</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="display: inline-block;">Tambah produk</h2>
+                <button class="btn-danger" style="display: inline-block; padding: 8px;" type="button" onclick="document.getElementById('form').reset()">
+                    <i style="margin: 0 4px" class="fa fa-close"></i> Clear
+                </button>
+            </div>
+            
+            <div>
+                <form action="post" id="form">
+                   <input class="field" type="text" name="nama" id="nama" placeholder="Nama Produk"> 
+                   <input class="field" type="text" name="merk" id="merk" placeholder="Merk"> 
+                   <input class="field" type="number" name="harga" id="harga" placeholder="Harga">
+                   <input class="field" type="number" name="stok" id="stok" placeholder="Stok">
+                   <textarea class="field" name="deskripsi" id="deskripsi" rows="20" placeholder="Deskripsi produk"></textarea>
+                   <label class="field" for="foto">Pilih lima gambar utama produk:</label>
+                   <input class="field" type="file" name="foto" id="foto">
+                   <input class="field" type="file" name="foto" id="foto">
+                   <input class="field" type="file" name="foto" id="foto">
+                   <input class="field" type="file" name="foto" id="foto">
+                   <input class="field" type="file" name="foto" id="foto">
+                    <button type="button" onclick="location.href='../dashboard/'" style="width: 100%; padding: 10px;background-color: rgb(60, 178, 60); color: white;">Submit</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

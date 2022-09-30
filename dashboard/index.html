@@ -4,13 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e43ef1efb4.js" crossorigin="anonymous"></script>    <title>Daftar</title>
+    <script src="https://kit.fontawesome.com/e43ef1efb4.js" crossorigin="anonymous"></script>
+    <title>Dashboard | Dewata Market</title>
+    <style>
+        .navbar {
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 0;
+            border-bottom: 1px solid lightgray;
+            }
+        .logo {
+            border: 0;
+            display: inline-block;
+            height: 3rem;
+            width: auto;
+        }
+        body, h1 {
+            margin: 0;
+            padding: 0;
+        }
+        th, td {
+            padding: 12px;
+            max-width: 100%;
+            text-align: center;
+        }
+        .product-name {
+            text-align: left;
+        }
+        .btn-danger {
+            background-color: rgb(241, 121, 121);
+            color: white;
+            padding: 0 15px
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center; margin-bottom: 100px;">Toko Saya</h1>
-        <div style="margin: 0 auto; width: 90%;">
-            <h2>Daftar produk</h2>
-            <table style="width: 90%;" border="1">
+    <div class="navbar">
+        <div style="display: flex; align-items: center;">
+            <img class="logo" src="../assets/images/logo.png" alt="logo" href="https://id.pngtree.com/so/pergi-ke-pantai">
+            <h1 style="margin-left: 10px; display: inline-block; font-size: 24px;">Dewata Market</h1>
+        </div>
+        <button type="button" onclick="location.href='../login/'" class="btn-danger">Logout</button>
+    </div>
+    <div style="height: 300px; background-blend-mode: darken; background-position: -300px -240px; background-color: rgba(0, 0, 0, 0.6); background-image: url('https://www.lascimmiapensa.com/wp-content/uploads/2020/09/breaking-bad-blue-meth.jpg'); padding: 40px 50px; display: flex; justify-content: center; align-items:flex-end;">
+            <div style="text-align: center; color: white;">
+                <img src="https://m.media-amazon.com/images/M/MV5BZTlhM2NmOTctMGNiZS00ZjUwLTkzM2EtNzdjNTU1ZWI3Y2Q1XkEyXkFqcGdeQXVyMTExNzkxOTY@._V1_.jpg" alt="avatar" style="border-radius: 50%; width: 70px; height: 70px; object-fit: cover;">
+                <h1 style="margin: 15px 0px 5px 0px;">Toko Los Pollos Hermanos</h1>
+                <p style="margin: 0;">Denpasar, Bali</p>
+            </div>
+    </div>
+        <div style="margin: 20px auto; width: 90%;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 style="display: inline-block;">Daftar produk</h2>    
+                <button style="display: inline-block; padding: 8px;" type="button" onclick="location.href='../add/'">
+                    <i style="margin: 0 4px" class="fa fa-plus-circle"></i> Tambah produk
+                </button>
+            </div>
+            <table style="width: 100%;" border="1">
                 <tr>
                     <th>Gambar</th>
                     <th>Nama Produk</th>
@@ -21,82 +73,90 @@
                 <tr>
                     <td>
                         <center>
-                            <img style="max-width: 100px; margin: 10px auto;" src="https://lzd-img-global.slatic.net/g/p/ba387f38e6c4dccec39e8a5f163b6890.jpg_720x720q80.jpg_.webp" alt="sepatu kulit">
+                            <img style="max-width: 100px;" src="https://lzd-img-global.slatic.net/g/p/ba387f38e6c4dccec39e8a5f163b6890.jpg_720x720q80.jpg_.webp" alt="sepatu kulit">
                         </center>
                     </td>
-                    <td>
+                    <td class="product-name">
                        Sepatu kulit
                     </td>
                     <td>Rp. 30.000</td>
                     <td>500</td>
                     <td>
-                        <button type="button" onclick="location.href='../edit/'">
-                            <i class="fa fa-edit"></i>
-                            Edit
+                        <button class="btn-danger" style="height: 40px;" type="button">
+                            <i class="fa fa-trash"></i>
+                            Hapus
                         </button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <center>
-                            <img style="max-width: 100px; margin: 10px auto;" src="https://cdn.idntimes.com/content-images/post/20170615/c0e9498ad700bfb8693a68fb345a0c3d-6860dfb95545ebb0f144149e58b60932.jpg" alt="sepatu hak tinggi">
+                            <img style="max-width: 100px;" src="https://cdn.idntimes.com/content-images/post/20170615/c0e9498ad700bfb8693a68fb345a0c3d-6860dfb95545ebb0f144149e58b60932.jpg" alt="sepatu hak tinggi">
                         </center>
                     </td>
-                    <td>Sepatu hak tinggi</td>
+                    <td class="product-name">
+                        Sepatu hak tinggi
+                    </td>
                     <td>Rp. 150.000</td>
                     <td>245</td>
                     <td>
-                        <button type="button" onclick="location.href='../edit/'">
-                            <i class="fa fa-edit"></i>
-                            Edit
+                        <button class="btn-danger" style="height: 40px;" type="button">
+                            <i class="fa fa-trash"></i>
+                            Hapus
                         </button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <center>
-                            <img style="max-width: 100px; margin: 10px auto;" src="https://cdn.idntimes.com/content-images/post/20170615/c0e9498ad700bfb8693a68fb345a0c3d-6860dfb95545ebb0f144149e58b60932.jpg" alt="sepatu hak tinggi">
+                            <img style="max-width: 100px;" src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/9/7/df5f6499-d1d8-4e49-9ddd-ac0fb0040483.jpg" alt="tas kulit">
                         </center>
                     </td>
-                    <td>Tas kulit</td>
+                    <td class="product-name">
+                        Tas kulit
+                    </td>
                     <td>Rp. 300.000</td>
                     <td>5400</td>
                     <td>
-                        <button type="button" onclick="location.href='../edit/'">
-                            <i class="fa fa-edit"></i>
-                            Edit
+                        <button class="btn-danger" style="height: 40px;" type="button">
+                            <i class="fa fa-trash"></i>
+                            Hapus
                         </button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <center>
-                            <img style="max-width: 100px; margin: 10px auto;" src="https://cdn.idntimes.com/content-images/post/20170615/c0e9498ad700bfb8693a68fb345a0c3d-6860dfb95545ebb0f144149e58b60932.jpg" alt="sepatu hak tinggi">
+                            <img style="max-width: 100px;" src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//89/MTA-22453622/all-in_all-in_full02.jpg" alt="sabuk smp">
                         </center>
                     </td>
-                    <td>Sabuk sekolah SMP</td>
+                    <td class="product-name">
+                        Sabuk sekolah SMP
+                    </td>
                     <td>Rp. 30.000</td>
                     <td>323</td>
                     <td>
-                        <button type="button" onclick="location.href='../edit/'">
-                            <i class="fa fa-edit"></i>
-                            Edit
+                        <button class="btn-danger" style="height: 40px;" type="button">
+                            <i class="fa fa-trash"></i>
+                            Hapus
                         </button>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <center>
-                            <img style="max-width: 100px; margin: 10px auto;" src="https://cdn.idntimes.com/content-images/post/20170615/c0e9498ad700bfb8693a68fb345a0c3d-6860dfb95545ebb0f144149e58b60932.jpg" alt="sepatu hak tinggi">
+                            <img style="max-width: 100px;" src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//85/MTA-10114239/sidu_buku_tulis_sidu_78_lbr_full01_ijacttae.jpg" alt="buku tulis">
                         </center>
                     </td>
-                    <td>Buku tulis</td>
+                    <td class="product-name">
+                        Buku tulis
+                    </td>
                     <td>Rp. 3000</td>
                     <td>3293</td>
                     <td>
-                        <button type="button" onclick="location.href='../edit/'">
-                            <i class="fa fa-edit"></i>
-                            Edit
+                        <button class="btn-danger" style="height: 40px;" type="button">
+                            <i class="fa fa-trash"></i>
+                            Hapus
                         </button>
                     </td>
                 </tr>
