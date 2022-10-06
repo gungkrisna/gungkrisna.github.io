@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+    --primary: rgb(67, 202, 131);
+    --lightgray: #f1f1f0;
+    --darkgray: #2b2a2a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    color: --darkgray;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* primary-header */
+.logo {
+    width: 48px;
+    margin: 2rem;
+}
+
+.primary-header {
+    padding: 0 150px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-navigation li {
+	padding-block: 2rem;
+	padding-inline: clamp(0.5rem, 1vw, 2rem);
+}
+
+.primary-navigation a {
+    text-decoration: none;
+    color: inherit
+}
+
+.primary-navigation a:hover {
+    color:rgb(67, 202, 131)
+}
+
+.mobile-nav-toggle[data-visible="true"] {
+    transform: translateX(0%);
+}
+
+/* banner */
+
+.banner {
+    padding: 10vh 10vw;
+    height: min-content;
+    background: linear-gradient(rgba(0, 254, 144, 0.5), rgba(0, 254, 144, 0.5)), url('https://saltwire.imgix.net/2022/9/27/what-is-known-so-far-about-the-nord-stream-gas-pipeline-leaks.jpg?cs=srgb&w=1200&h=630&fit=crop&auto=compress%2Cformat%2Cenhance');
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.banner h1 {
+    display: inline-block;
+    font-size: clamp(1rem, 10vw, 3rem); 
+    margin: 0 auto;
+}
+
+.banner p {
+    font-weight: 500;
+}
+.banner button {
+    margin-top: 20px;
+    padding: 18px 50px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+}
+
+.banner button:hover {
+    background-color: #fff;
+}
+
+/* our-products */
+
+.our-products {
+    padding: 5vh 10vw;
+}
+
+.our-products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.our-products .flex {
+    justify-content: center;
+    gap: 2rem
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: 80px;
+}
+
+/* about-us */
+
+.about-us {
+    padding: 10vh 15vw;
+    background-color: var(--lightgray);
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.about-us img {
+    width: 33%;
+}
+
+/* testimonial */
+
+.testimonial {
+    padding: 10vh 0;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.swiper {
+    width: 60vw;
+}
+
+.prev-testimonial-button {
+    margin: 0 10vw;
+}
+
+
+.next-testimonial-button {
+    margin: 0 10vw;
+}
+
+.prev-testimonial-button img, .next-testimonial-button img {
+    height: 48px;
+    width: 48px;
+    filter: invert(0%) sepia(5%) saturate(0%) hue-rotate(325deg) brightness(105%) contrast(105%);
+}
+
+.prev-testimonial-button img:hover, .next-testimonial-button img:hover {
+    filter: invert(85%) sepia(99%) saturate(440%) hue-rotate(69deg) brightness(87%) contrast(79%);;
+}
+
+.testimonial-slide {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+.testimonial-slide .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* subscribe */
+
+.subscribe {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 5vh 0px;
+    gap: 1rem;
+}
+
+.subscribe input {
+    width: 50vw;
+    height: 52px;
+    border-radius: 6px;
+    border: 1px solid white;
+    background-color: var(--primary);
+    color: white;
+    padding: 0px 2rem;
+}
+
+.subscribe input::placeholder {
+    color: white;
+}
+
+.subscribe input:focus {
+    outline: none !important;
+    box-shadow: -2px 4px 10px white;
+}
+.subscribe button {
+    color: var(--primary);
+    height: 52px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 0px;
+    font-size: 14px;
+}
+
+.subscribe button:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+/* FOOTER */
+
+footer {
+    flex-direction: column;
+}
+
+.footer-navigation {
+    padding: 5vh 10vw;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    gap: 5vw;
+}
+
+.nav:first-child {
+    width: 33vw;
+}
+
+.nav h2 {
+    margin-top: 0;
+}
+
+.nav-list {
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list li {
+    margin: 0.3rem 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-list li a:hover {
+    color: var(--primary);
+    
+}
+
+.socials a {
+    color: inherit;
+}
+
+.socials a:hover {
+    color: var(--primary);
+}
+
+.socials a i{
+    margin: 1rem 0.5rem 0rem 0;
+}
+
+.copyright {
+    padding: 2vh 5vh;
+    background-color: var(--darkgray);
+    text-align: center;
+}
+
+.copyright a {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+
+
+    .primary-header {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    .primary-navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .our-products .flex {
+        flex-direction: column;
+    }
+
+    .about-us {
+        flex-direction: column;
+        gap: 2rem
+    }
+
+    .about-us img {
+        width: 100%;
+    }
+    
+    .subscribe {
+        flex-direction: column;
+    }
+
+    .testimonial-slide {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .subscribe input {
+        width: 70vw;
+    }
+
+    .subscribe button {
+        width: calc(70vw + 4rem + 2px);
+    }
+
+    .footer-navigation {
+        flex-direction: column;
+        
+    }
+
+    .nav:first-child {
+        width: 100%;
+    }
+}
