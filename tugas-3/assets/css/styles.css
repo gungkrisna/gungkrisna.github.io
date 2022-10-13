@@ -1,3 +1,8 @@
+:root {
+    --primary: 35, 196, 131;
+    --blue: 3, 110, 253;
+}
+
 body {
     background-color: white;
     margin: 0;
@@ -11,24 +16,27 @@ body {
     align-items: center;
 }
 
+h1 {
+    margin-bottom: 1em;
+}
+
 .button {
+    margin: 2em auto;
     padding: 1.2em 3em;
     font-size: 12px;
     color: #f2f2f2;
-    background-color: #23c483;
     border: none;
     border-radius: 8px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    text-transform: uppercase;
 }
 
 .button:hover {
     filter: brightness(110%);
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
 }
-
 
 form {
     margin: 40px 0;
@@ -63,18 +71,22 @@ input {
 
 input:hover {
     background-color: #fff;
-    box-shadow: 0 0 0 4px rgba(35, 196, 131, 0.1);
+    box-shadow: 0 0 0 4px rgba(var(--primary), 0.1);
     transition: all 0.3s ease 0s;
 }
 
 input:focus {
-    border-color: #23c483;
-    box-shadow: 0 0 0 4px rgba(35, 196, 131, 0.1);
+    border-color: rgb(var(--primary));
+    box-shadow: 0 0 0 4px rgba(var(--primary), 0.1);
     transition: all 0.3s ease 0s;
 }
 
-.btn-submit {
-    margin: 2em auto;
+.btn-save {
+    background-color: rgb(var(--primary));
+}
+
+.btn-save:hover {
+    box-shadow: 0px 15px 20px rgba(var(--primary), 0.4);
 }
 
 table {
@@ -113,7 +125,7 @@ th:last-child, td:last-child {
 }
 
 .btn-edit {
-    background-color: #0d6efd;
+    background-color: rgb(var(--blue));
 }
 
 .btn-delete {

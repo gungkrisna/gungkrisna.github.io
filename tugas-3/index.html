@@ -9,19 +9,21 @@
 </head>
 <body>
     <div class="container">
-            <form onsubmit="onFormSubmit();" autocomplete="off">
-                <div class="form-group">
-                    <label for="nim">NIM</label>
-                    <input type="number" name="nim" id="nim" placeholder="NIM">
-                </div>
-                <div class="form-group">
-                    <label for="name">Nama</label>
-                    <input type="text" name="name" id="name" placeholder="Nama">
-                </div>
-                <button class="button btn-submit" type="submit">SIMPAN</button>
-            </form>
+        <form id="studentForm" autocomplete="off">
+            <h1 id="formTitle">Tambah Data</h1>
+            <input type="hidden" name="id" id="id">
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="number" name="nim" id="nim" placeholder="NIM">
+            </div>
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" name="name" id="name" placeholder="Nama">
+            </div>
+            <button class="button btn-save" type="button" id="btnSave" onclick="save()">Simpan Data</button>
+        </form>
 
-        <table id="studentList">
+        <table>
             <thead>
                 <tr>
                     <th>No</th>
@@ -30,7 +32,16 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="studentList">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>
+                        <button class="button btn-edit"><img src="assets/icons/edit.svg" alt="edit button"></button>
+                        <button class="button btn-delete"><img src="assets/icons/trash.svg" alt="delete button"></button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
