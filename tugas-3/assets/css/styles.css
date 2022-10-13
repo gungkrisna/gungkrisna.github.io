@@ -1,0 +1,144 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    padding: 1.2em 3em;
+    font-size: 12px;
+    color: #f2f2f2;
+    background-color: #23c483;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:hover {
+    filter: brightness(110%);
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
+
+
+form {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 2px solid #f2f2f2;
+    border-radius: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 70%;
+}
+
+input:hover {
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(35, 196, 131, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+input:focus {
+    border-color: #23c483;
+    box-shadow: 0 0 0 4px rgba(35, 196, 131, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+.btn-submit {
+    margin: 2em auto;
+}
+
+table {
+    table-layout: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80vw;
+    border: 2px solid #f2f2f2;
+    background-color: #fff;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th:first-child, td:first-child {
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+th:last-child, td:last-child {
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.btn-edit, .btn-delete {
+    padding: 0.75em 1.2em;
+    margin: 0 0.5em;
+}
+
+.btn-edit {
+    background-color: #0d6efd;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+    filter: brightness(150%);
+    box-shadow: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 80vw;
+    }
+}
