@@ -193,16 +193,31 @@ input[type=number] {
     }
 
     .alert {
-        padding: 0;
-        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
     }
 
     .alert > p {
-        padding: 0.1rem 1.25rem;
+        margin: 0;
     }
+
+    .btn-close {
+        padding: 0;
+        width: fit-content;
+        margin-bottom: auto;
+    }
+    
 
     .alert-action {
         justify-content: flex-end;
         margin: 0.75rem 0;
+    }
+
+    .btn-save {
+        width: 100%;
+        margin: 3em auto;
+        padding: 1.2em 3em;
+        background-color: rgb(var(--primary));
+        text-transform: uppercase;
     }
 }

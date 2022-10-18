@@ -109,7 +109,6 @@ function showAlert(alert, info, description) {
     </div>
     `)
 
-    $('#undo')
     $('#formAlert').on("click", ".btn-close", function() {
         closeAlert()
     })
