@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic CRUD using jQuery">
+    <title>jQuery CRUD</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="studentForm" autocomplete="off">
+            <h1 id="formTitle">Tambah Data</h1>
+            <div id="alert"></div>
+            <input type="hidden" name="id" id="id">
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="number" name="nim" id="nim" placeholder="NIM">
+            </div>
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" name="name" id="name" placeholder="Nama">
+            </div>
+            <button class="button btn-save" type="button" id="btnSave">Simpan Data</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="studentList">
+            </tbody>
+        </table>
+    </div>
+    <script src="assets/jquery/script.js"></script>
+</body>
+</html>
