@@ -20,11 +20,8 @@ function allData() {
     })
 }
 
-// Create data
 $('#btnSave').click(function() {
     if ($('#nim').val() && $('#name').val()) {
-
-        if ($('#formAlert').length) closeAlert()
 
         var id
         studentData.length != 0 ?
@@ -38,13 +35,13 @@ $('#btnSave').click(function() {
                     this.name = $('#name').val()
                 }
             })
-        
+
             $('#id').val('')
 
             root.style.setProperty('--primary', '35, 196, 131')
 
-            $('#btnSave').text('Simpan Data')
             $('#formTitle').text('Tambah Data')
+            $('#btnSave').text('Simpan Data')
         } else {
             var item = {
                 id: id + 1,
@@ -68,7 +65,9 @@ $('#btnSave').click(function() {
 // Update data
 $('#studentList').on("click", ".btn-edit", function() {
     var id = $(this).attr('id')
+
     root.style.setProperty('--primary', '3, 110, 253')
+
     $('#formTitle').text('Perbarui Data')
     $('#btnSave').html('Edit Data')
 

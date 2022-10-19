@@ -50,13 +50,6 @@ form {
     border-radius: 8px;
 }
 
-.alert-action {
-    display: flex;
-    align-items: center;
-    color: inherit;
-    font-weight: bold;
-}
-
 .alert-danger {
     color: #721c24;
     background-color: #f8d7da;
@@ -199,6 +192,7 @@ input[type=number] {
 
     .alert > p {
         margin: 0;
+        align-self: center;
     }
 
     .btn-close {
@@ -207,12 +201,6 @@ input[type=number] {
         margin-bottom: auto;
     }
     
-
-    .alert-action {
-        justify-content: flex-end;
-        margin: 0.75rem 0;
-    }
-
     .btn-save {
         width: 100%;
         margin: 3em auto;
