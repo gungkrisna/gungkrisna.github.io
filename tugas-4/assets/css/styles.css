@@ -203,9 +203,5 @@ input[type=number] {
     
     .btn-save {
         width: 100%;
-        margin: 3em auto;
-        padding: 1.2em 3em;
-        background-color: rgb(var(--primary));
-        text-transform: uppercase;
     }
 }
