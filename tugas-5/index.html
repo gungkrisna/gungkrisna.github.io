@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic CRUD implementation using jQuery">
+    <title>jQuery CRUD with Bootstrap</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid px-4">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-dice-1-fill" style="width:30px; height:24px;" class="d-inline-block align-text-top"></i>
+            Point
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false""> 
+                  Versi Lainnya
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://gungkrisna.github.io/tugas-3/">Vanilla CSS + Javascript</a></li>
+                  <li><a class="dropdown-item" href="https://gungkrisna.github.io/jQuery-CRUD/">Vanilla CSS + jQuery</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <form id="studentForm" class="m-5" autocomplete="off">
+                <h1 id="formTitle" class="mb-4">Tambah Data</h1>
+                <div id="alert"></div>
+                <input type="hidden" name="id" id="id">
+                <div class="form-floating mb-4">
+                    <input type="number" class="form-control" name="nim" id="nim" placeholder="NIM" required>
+                    <label for="nim">NIM</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Nama" required> 
+                    <label for="name">Nama</label>
+                </div>
+                <button class="btn btn-primary w-100 text-uppercase p-3" type="button" id="btnSave">Simpan Data</button>
+            </form>
+
+            <div class="card m-5" style="width: 80vw;">
+                <div class="card-header">
+                    Data Mahasiswa
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-light table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center">No</th>
+                                    <th scope="col">NIM</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col" class="text-center ">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="studentList">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteConfirmation">
+        <div class="modal-dialog modal-dialog-centered">
+            <modal class="modal-content border-0">
+                <div class="modal-header justify-content-start bg-danger text-white fs-5 fw-bold p-4 gap-2">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    <p class="m-0">Hapus data ini?</p>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="m-0 fs-6">Data akan terhapus secara <strong>permanen</strong> dan tidak dapat dikembalikan.</p>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn btn-danger text-uppercase" id="confirmDelete">Hapus</button>
+                    <button type="button" class="btn btn-outline-secondary text-uppercase" data-bs-dismiss="modal">Batal</button>
+                </div>
+            </modal>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
