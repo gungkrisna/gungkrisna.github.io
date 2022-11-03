@@ -129,3 +129,20 @@ function resetForm() {
     $('#btnSave').text('Simpan Data')
     $('#btnSave').addClass('btn-primary').removeClass('btn-secondary');
 }
+
+$.ajax ({
+    url: "https://dekontaminasi.com/api/id/covid19/stats",
+    type: "GET",
+    dataType: "json",
+    success: function(data) {
+        console.log(data)
+    }
+})
+
+function fetchData  () {
+    fetch("https://dekontaminasi.com/api/id/covid19/stats")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+    })
+} 
